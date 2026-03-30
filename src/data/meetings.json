@@ -11,7 +11,7 @@
       "name": "Narcotics Anonymous (NA)",
       "founded": "1953",
       "stats": "145 countries | 77,000+ weekly meetings",
-      "description": "A global, community-based organization for people recovering from drug addiction. NA adapted the 12-step model to be substance-agnostic — the only requirement for membership is the desire to stop using. Its therapeutic value of one addict helping another is unmatched.",
+      "description": "A global, community-based organization for people recovering from drug addiction. NA adapted the 12-step model to be substance-agnostic \u2014 the only requirement for membership is the desire to stop using. Its therapeutic value of one addict helping another is unmatched.",
       "url": "https://www.na.org/meetingsearch/"
     },
     {
@@ -46,7 +46,7 @@
       "name": "Adult Children of Alcoholics (ACA)",
       "founded": "~1978",
       "stats": "2,596+ groups | 45 countries",
-      "description": "A 12-step program for adults who grew up in alcoholic or otherwise dysfunctional homes. ACA addresses the deep patterns — the Laundry List traits — that adult children carry into their relationships, work, and self-image. Recovery means reparenting yourself with gentleness.",
+      "description": "A 12-step program for adults who grew up in alcoholic or otherwise dysfunctional homes. ACA addresses the deep patterns \u2014 the Laundry List traits \u2014 that adult children carry into their relationships, work, and self-image. Recovery means reparenting yourself with gentleness.",
       "url": "https://adultchildren.org/meeting-search/"
     },
     {
@@ -90,7 +90,7 @@
       "name": "Celebrate Recovery",
       "founded": "1991",
       "stats": "~35,000 groups | 30+ countries",
-      "description": "A Christ-centered, 12-step recovery program hosted in churches worldwide. Based on the Beatitudes, Celebrate Recovery addresses hurts, hang-ups, and habits of all kinds — not just substance addiction. Its Christian framework makes it the largest faith-based recovery program in the world.",
+      "description": "A Christ-centered, 12-step recovery program hosted in churches worldwide. Based on the Beatitudes, Celebrate Recovery addresses hurts, hang-ups, and habits of all kinds \u2014 not just substance addiction. Its Christian framework makes it the largest faith-based recovery program in the world.",
       "url": "https://www.celebraterecovery.com/crgroups"
     },
     {
@@ -111,7 +111,7 @@
       "name": "Secular Organizations for Sobriety (SOS)",
       "founded": "1985",
       "stats": "Hundreds of groups worldwide",
-      "description": "The first major secular alternative to 12-step programs, founded by James Christopher. SOS maintains that sobriety is a separate issue from religion or spirituality, and credits the individual — not a higher power — with achieving and maintaining recovery. A pioneer in secular recovery.",
+      "description": "The first major secular alternative to 12-step programs, founded by James Christopher. SOS maintains that sobriety is a separate issue from religion or spirituality, and credits the individual \u2014 not a higher power \u2014 with achieving and maintaining recovery. A pioneer in secular recovery.",
       "url": "https://www.sossobriety.org/meetings"
     },
     {
@@ -125,7 +125,7 @@
       "name": "LifeRing Secular Recovery",
       "founded": "1999",
       "stats": "150+ meetings",
-      "description": "A self-empowerment approach to addiction recovery that relies on human effort and knowledge rather than supernatural agency. LifeRing's \"3-S\" philosophy — Sobriety, Secularity, and Self-help — empowers individuals to build their own Personal Recovery Program. Abstinence-based and peer-run.",
+      "description": "A self-empowerment approach to addiction recovery that relies on human effort and knowledge rather than supernatural agency. LifeRing's \"3-S\" philosophy \u2014 Sobriety, Secularity, and Self-help \u2014 empowers individuals to build their own Personal Recovery Program. Abstinence-based and peer-run.",
       "url": "https://lifering.org/find-a-meeting/"
     },
     {
@@ -139,8 +139,22 @@
       "name": "In The Rooms (ITR)",
       "founded": "2010",
       "stats": "Millions of users worldwide",
-      "description": "The world's largest free online recovery community, aggregating meetings and support across many traditions — 12-step, secular, Buddhist, Christian, and more. ITR broke geographic barriers to recovery by putting meetings online before it was mainstream. Recovery anywhere, anytime.",
+      "description": "The world's largest free online recovery community, aggregating meetings and support across many traditions \u2014 12-step, secular, Buddhist, Christian, and more. ITR broke geographic barriers to recovery by putting meetings online before it was mainstream. Recovery anywhere, anytime.",
       "url": "https://www.intherooms.com/home/"
+    },
+    {
+      "name": "HAMS: Harm Reduction for Alcohol",
+      "founded": "Peer-led",
+      "stats": "Online forums, chat, email groups & live meetings",
+      "description": "HAMS is a peer-led, free-of-charge support and informational group for anyone who wants to change their drinking habits for the better \u2014 participants choose their own goal, whether safe drinking, reduced drinking, or quitting altogether. One of the few recovery communities that fully embraces harm reduction without requiring any abstinence goal, making it accessible to people not yet ready for traditional recovery programs.",
+      "url": "https://hamsnetwork.org/meetings/"
+    },
+    {
+      "name": "MARA International (Medication Assisted Recovery Anonymous)",
+      "founded": "Growing network",
+      "stats": "US-based + online meetings",
+      "description": "MARA provides peer support specifically for people using medication-assisted treatment (MAT) \u2014 methadone, buprenorphine/Suboxone, naltrexone \u2014 who are often stigmatized in traditional 12-step settings. It bridges the gap between clinical treatment and community fellowship, advocating that MAT is a valid, full form of recovery.",
+      "url": "https://www.mar-anonymous.org/find-a-meeting"
     }
   ]
 }
