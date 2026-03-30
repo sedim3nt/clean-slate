@@ -1,0 +1,146 @@
+{
+  "twelveStep": [
+    {
+      "name": "Alcoholics Anonymous (AA)",
+      "founded": "1935",
+      "stats": "2+ million members | 123,000+ groups | 180 nations",
+      "description": "The original 12-step fellowship and the largest recovery program in human history, founded in Akron, Ohio by Bill W. and Dr. Bob. Its spiritual-but-not-religious framework, anchored in mutual support and the 12 Steps, became the template for virtually every addiction fellowship that followed.",
+      "url": "https://www.aa.org/find-aa"
+    },
+    {
+      "name": "Narcotics Anonymous (NA)",
+      "founded": "1953",
+      "stats": "145 countries | 77,000+ weekly meetings",
+      "description": "A global, community-based organization for people recovering from drug addiction. NA adapted the 12-step model to be substance-agnostic — the only requirement for membership is the desire to stop using. Its therapeutic value of one addict helping another is unmatched.",
+      "url": "https://www.na.org/meetingsearch/"
+    },
+    {
+      "name": "Al-Anon / Alateen",
+      "founded": "1951",
+      "stats": "Tens of thousands of groups | 133+ countries",
+      "description": "A mutual support program for people affected by someone else's drinking. Al-Anon (for adults) and Alateen (for younger members) offer the 12 Steps adapted for families and friends, recognizing that addiction is a family disease and recovery must extend beyond the individual.",
+      "url": "https://al-anon.org/al-anon-meetings/find-an-al-anon-meeting/"
+    },
+    {
+      "name": "Overeaters Anonymous (OA)",
+      "founded": "1960",
+      "stats": "~60,000 members | ~6,500 groups | 75+ countries",
+      "description": "A fellowship of individuals who, through shared experience and the 12 Steps, recover from compulsive eating, food addiction, and eating disorders including anorexia and bulimia. OA addresses the physical, emotional, and spiritual aspects of compulsive eating.",
+      "url": "https://oa.org/find-a-meeting/"
+    },
+    {
+      "name": "Gamblers Anonymous (GA)",
+      "founded": "1957",
+      "stats": "1,200+ chapters | 60+ countries",
+      "description": "A fellowship of people who share their experience, strength, and hope to solve their common problem of compulsive gambling. GA's 12-step program of recovery is adapted from AA, recognizing that compulsive gambling is a progressive illness that can be arrested but never cured.",
+      "url": "https://www.gamblersanonymous.org/ga/meetingsearch"
+    },
+    {
+      "name": "Cocaine Anonymous (CA)",
+      "founded": "1982",
+      "stats": "2,000+ groups | 50+ countries",
+      "description": "A fellowship of people who share their experience recovering from cocaine addiction and all other mind-altering substances. Despite its name, CA welcomes anyone with a desire to stop using cocaine, crack, speed, and all other mind-altering substances.",
+      "url": "https://ca.org/meetings/"
+    },
+    {
+      "name": "Adult Children of Alcoholics (ACA)",
+      "founded": "~1978",
+      "stats": "2,596+ groups | 45 countries",
+      "description": "A 12-step program for adults who grew up in alcoholic or otherwise dysfunctional homes. ACA addresses the deep patterns — the Laundry List traits — that adult children carry into their relationships, work, and self-image. Recovery means reparenting yourself with gentleness.",
+      "url": "https://adultchildren.org/meeting-search/"
+    },
+    {
+      "name": "Sex & Love Addicts Anonymous (SLAA)",
+      "founded": "1976",
+      "stats": "1,500+ groups | 47 countries",
+      "description": "A 12-step fellowship for anyone who suffers from addictive compulsive sexual behavior, obsessive or dependent romantic attachment, or both. SLAA provides a safe space to address the ways sex and love addiction manifest in patterns of fantasy, intrigue, and avoidance.",
+      "url": "https://slaafws.org/findameeting/"
+    },
+    {
+      "name": "Sex Addicts Anonymous (SAA)",
+      "founded": "1977",
+      "stats": "1,000+ groups | 33 countries",
+      "description": "A fellowship of people who share their experience recovering from addictive sexual behavior. SAA uses a \"three circles\" model where members define their own inner circle (bottom-line behaviors to abstain from), middle circle (boundary behaviors), and outer circle (healthy behaviors).",
+      "url": "https://saa-recovery.org/meetings/"
+    },
+    {
+      "name": "Marijuana Anonymous (MA)",
+      "founded": "1989",
+      "stats": "600+ groups | US, Canada & Europe",
+      "description": "A fellowship of people who share the common desire to stop using marijuana. In a culture where cannabis is increasingly normalized, MA offers a judgment-free space for those who recognize their relationship with marijuana has become unmanageable.",
+      "url": "https://marijuana-anonymous.org/find-a-meeting/"
+    },
+    {
+      "name": "Crystal Meth Anonymous (CMA)",
+      "founded": "1994",
+      "stats": "800+ meetings worldwide",
+      "description": "A fellowship of people who share their experience recovering from addiction to crystal meth. CMA adapts the 12 Steps specifically for methamphetamine addiction, addressing the unique challenges of meth recovery including cognitive healing and identity reconstruction.",
+      "url": "https://www.crystalmeth.org/meetings/find-a-meeting/"
+    }
+  ],
+  "nonTwelveStep": [
+    {
+      "name": "SMART Recovery",
+      "founded": "1994",
+      "stats": "3,200+ weekly meetings worldwide",
+      "description": "A science-based program using Cognitive Behavioral Therapy (CBT) and Rational Emotive Behavior Therapy (REBT). SMART teaches a 4-point program: building motivation, coping with urges, managing thoughts and behaviors, and living a balanced life. No sponsors, no steps, no higher power required.",
+      "url": "https://www.smartrecovery.org/community/calendar.php"
+    },
+    {
+      "name": "Celebrate Recovery",
+      "founded": "1991",
+      "stats": "~35,000 groups | 30+ countries",
+      "description": "A Christ-centered, 12-step recovery program hosted in churches worldwide. Based on the Beatitudes, Celebrate Recovery addresses hurts, hang-ups, and habits of all kinds — not just substance addiction. Its Christian framework makes it the largest faith-based recovery program in the world.",
+      "url": "https://www.celebraterecovery.com/crgroups"
+    },
+    {
+      "name": "Refuge Recovery",
+      "founded": "2014",
+      "stats": "400+ meetings",
+      "description": "A mindfulness-based addiction recovery program rooted in Buddhist philosophy and the Four Noble Truths. Refuge Recovery treats addiction as suffering caused by craving, and offers meditation, community, and the Eightfold Path as the way out. Practice, not dogma.",
+      "url": "https://www.refugerecovery.org/meetings"
+    },
+    {
+      "name": "Recovery Dharma",
+      "founded": "2019",
+      "stats": "200+ online meetings",
+      "description": "A peer-led, Buddhist-inspired recovery community that emerged as a democratic, non-hierarchical alternative in the Buddhist recovery space. Recovery Dharma emphasizes meditation, personal inquiry, and community support without centering on any single teacher or authority figure.",
+      "url": "https://recoverydharma.org/find-a-meeting"
+    },
+    {
+      "name": "Secular Organizations for Sobriety (SOS)",
+      "founded": "1985",
+      "stats": "Hundreds of groups worldwide",
+      "description": "The first major secular alternative to 12-step programs, founded by James Christopher. SOS maintains that sobriety is a separate issue from religion or spirituality, and credits the individual — not a higher power — with achieving and maintaining recovery. A pioneer in secular recovery.",
+      "url": "https://www.sossobriety.org/meetings"
+    },
+    {
+      "name": "Women for Sobriety (WFS)",
+      "founded": "1975",
+      "stats": "~300 meetings",
+      "description": "The first national self-help program for women with addictions, founded by Dr. Jean Kirkpatrick. WFS uses a 13-statement \"New Life\" program designed specifically for women's recovery needs, emphasizing emotional and spiritual growth, self-value, and building a new self-image.",
+      "url": "https://womenforsobriety.org/find-a-meeting/"
+    },
+    {
+      "name": "LifeRing Secular Recovery",
+      "founded": "1999",
+      "stats": "150+ meetings",
+      "description": "A self-empowerment approach to addiction recovery that relies on human effort and knowledge rather than supernatural agency. LifeRing's \"3-S\" philosophy — Sobriety, Secularity, and Self-help — empowers individuals to build their own Personal Recovery Program. Abstinence-based and peer-run.",
+      "url": "https://lifering.org/find-a-meeting/"
+    },
+    {
+      "name": "Moderation Management (MM)",
+      "founded": "1994",
+      "stats": "150+ groups",
+      "description": "A harm-reduction approach that does NOT require total abstinence. MM is for problem drinkers who want to reduce their drinking or make an informed choice about abstinence. It's the only major recovery program that supports moderation as a valid goal. Not for those with severe dependence.",
+      "url": "https://www.moderation.org/meetings/"
+    },
+    {
+      "name": "In The Rooms (ITR)",
+      "founded": "2010",
+      "stats": "Millions of users worldwide",
+      "description": "The world's largest free online recovery community, aggregating meetings and support across many traditions — 12-step, secular, Buddhist, Christian, and more. ITR broke geographic barriers to recovery by putting meetings online before it was mainstream. Recovery anywhere, anytime.",
+      "url": "https://www.intherooms.com/home/"
+    }
+  ]
+}

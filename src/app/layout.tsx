@@ -38,6 +38,7 @@ const navItems = [
   { href: "/journal", label: "Journal", icon: "✎" },
   { href: "/milestones", label: "Milestones", icon: "◉" },
   { href: "/tools", label: "Tools", icon: "⚒" },
+  { href: "/meetings", label: "Meetings", icon: "⚑" },
   { href: "/reflections", label: "Reflections", icon: "✦" },
 ];
 

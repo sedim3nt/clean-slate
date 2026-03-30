@@ -3,14 +3,18 @@
 import { useState } from "react";
 import UrgeSurf from "@/components/features/UrgeSurf";
 import GratitudeJar from "@/components/features/GratitudeJar";
-import EmergencyContacts from "@/components/features/EmergencyContacts";
 import HALTCheck from "@/components/features/HALTCheck";
+import BoxBreathing from "@/components/features/BoxBreathing";
+import ThoughtRecord from "@/components/features/ThoughtRecord";
+import BodyScan from "@/components/features/BodyScan";
 
 const tools = [
   { id: "urge", label: "Urge Surfing", icon: "🌊" },
   { id: "gratitude", label: "Gratitude Jar", icon: "🫙" },
   { id: "halt", label: "HALT Check", icon: "✋" },
-  { id: "emergency", label: "Emergency", icon: "☎" },
+  { id: "breathing", label: "Box Breathing", icon: "☐" },
+  { id: "thought", label: "Thought Record", icon: "💭" },
+  { id: "body", label: "Body Scan", icon: "✧" },
 ] as const;
 
 type ToolId = (typeof tools)[number]["id"];
@@ -51,7 +55,9 @@ export default function ToolsPage() {
           {active === "urge" && <UrgeSurf />}
           {active === "gratitude" && <GratitudeJar />}
           {active === "halt" && <HALTCheck />}
-          {active === "emergency" && <EmergencyContacts />}
+          {active === "breathing" && <BoxBreathing />}
+          {active === "thought" && <ThoughtRecord />}
+          {active === "body" && <BodyScan />}
         </div>
       )}
 

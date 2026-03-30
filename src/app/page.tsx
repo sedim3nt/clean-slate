@@ -134,6 +134,8 @@ export default function TodayPage() {
   const [submitted, setSubmitted] = useState(false);
   const [recentCheckins, setRecentCheckins] = useState<CheckIn[]>([]);
   const [exploring, setExploringState] = useState(false);
+  const [editingDate, setEditingDate] = useState(false);
+  const [editDate, setEditDate] = useState("");
 
   const loadState = useCallback(() => {
     const start = getStartDate();
@@ -197,19 +199,79 @@ export default function TodayPage() {
           </h1>
         ) : daysSober === 0 ? (
           <>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-sumi">
-              Welcome.
-            </h1>
+            <div className="flex items-center gap-3">
+              <h1 className="font-display text-4xl md:text-5xl font-bold text-sumi">
+                Welcome.
+              </h1>
+              <button
+                onClick={() => {
+                  setEditDate(getStartDate() || new Date().toISOString().split("T")[0]);
+                  setEditingDate(true);
+                }}
+                className="text-diluted hover:text-sumi transition-colors text-sm"
+                title="Edit sobriety date"
+              >
+                ✎
+              </button>
+            </div>
             <p className="font-display text-2xl text-diluted mt-1">
               Day 1 is brave.
             </p>
           </>
         ) : (
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-sumi">
-            Day {daysSober}
-          </h1>
+          <div className="flex items-center gap-3">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-sumi">
+              Day {daysSober}
+            </h1>
+            <button
+              onClick={() => {
+                setEditDate(getStartDate() || new Date().toISOString().split("T")[0]);
+                setEditingDate(true);
+              }}
+              className="text-diluted hover:text-sumi transition-colors text-sm"
+              title="Edit sobriety date"
+            >
+              ✎
+            </button>
+          </div>
         )}
         <p className="text-diluted mt-2">{dateStr}</p>
+
+        {/* Date editor */}
+        {editingDate && (
+          <div className="mt-3 border border-paper/40 rounded-lg p-4 bg-warm-white animate-fade-in">
+            <label className="text-sm text-diluted block mb-2">
+              Recovery start date
+            </label>
+            <div className="flex gap-2">
+              <input
+                type="date"
+                value={editDate}
+                onChange={(e) => setEditDate(e.target.value)}
+                className="flex-1 border border-paper/50 rounded-md px-3 py-2 bg-warm-white text-sumi text-sm"
+              />
+              <button
+                onClick={() => {
+                  if (editDate) {
+                    setStartDate(editDate);
+                    setDaysSober(getDaysSober());
+                    loadState();
+                  }
+                  setEditingDate(false);
+                }}
+                className="bg-sumi text-warm-white px-4 py-2 rounded-md text-sm font-semibold"
+              >
+                Save
+              </button>
+              <button
+                onClick={() => setEditingDate(false)}
+                className="text-diluted text-sm px-3 py-2 hover:text-sumi transition-colors"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Daily Reading */}
