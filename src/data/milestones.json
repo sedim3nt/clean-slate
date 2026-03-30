@@ -1,0 +1,13 @@
+[
+  { "days": 1, "name": "24 Hours", "message": "The hardest day. You did it." },
+  { "days": 7, "name": "1 Week", "message": "Seven days of choosing yourself." },
+  { "days": 30, "name": "30 Days", "message": "A full month. Your body is healing." },
+  { "days": 60, "name": "60 Days", "message": "Two months of quiet strength." },
+  { "days": 90, "name": "90 Days", "message": "The foundation is set. You're building something real." },
+  { "days": 180, "name": "6 Months", "message": "Half a year. The fog is lifting." },
+  { "days": 365, "name": "1 Year", "message": "One full turn around the sun, sober." },
+  { "days": 548, "name": "18 Months", "message": "A year and a half of showing up." },
+  { "days": 730, "name": "2 Years", "message": "Two years. You are proof it works." },
+  { "days": 1826, "name": "5 Years", "message": "Five years. You've built a life." },
+  { "days": 3652, "name": "10 Years", "message": "A decade of freedom. You are a lighthouse." }
+]
