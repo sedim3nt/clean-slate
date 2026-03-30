@@ -166,3 +166,111 @@ export function getNextMilestone(
   const sorted = [...milestones].sort((a, b) => a.days - b.days);
   return sorted.find((m) => m.days > daysSober) || null;
 }
+
+// Cloud sync functions
+import { supabase } from "./supabase";
+
+export async function syncToCloud(userId: string): Promise<void> {
+  const checkins = getCheckIns();
+  const journal = getJournalEntries();
+  const startDate = getStartDate();
+  const path = getSelectedPath();
+  const sponsor = getSponsorPhone();
+
+  // Upsert profile with sobriety date + path
+  if (startDate) {
+    await supabase.from("cs_profiles").upsert({
+      id: userId,
+      sobriety_date: startDate,
+      spiritual_path: path || undefined,
+      sponsor_phone: sponsor || undefined,
+    } as any, { onConflict: "id" });
+  }
+
+  // Upsert check-ins
+  for (const c of checkins) {
+    await supabase.from("cs_checkins").upsert({
+      user_id: userId,
+      date: c.date,
+      mood: c.mood,
+      cravings: c.cravings,
+      gratitude: c.gratitude || "",
+    } as any, { onConflict: "user_id,date" });
+  }
+
+  // Upsert journal entries
+  for (const j of journal) {
+    await supabase.from("cs_journal").upsert({
+      user_id: userId,
+      date: j.date,
+      prompt: j.prompt || "",
+      entry: j.entry,
+    } as any, { onConflict: "user_id,date" });
+  }
+}
+
+export async function syncFromCloud(userId: string): Promise<void> {
+  // Pull profile
+  const { data: profile } = await supabase
+    .from("cs_profiles")
+    .select("*")
+    .eq("id", userId)
+    .single();
+
+  if (profile?.sobriety_date) {
+    setStartDate(profile.sobriety_date);
+  }
+  if (profile?.spiritual_path) {
+    setSelectedPath(profile.spiritual_path as SpiritualPath);
+  }
+  if (profile?.sponsor_phone) {
+    setSponsorPhone(profile.sponsor_phone);
+  }
+
+  // Pull check-ins (cloud wins)
+  const { data: cloudCheckins } = await supabase
+    .from("cs_checkins")
+    .select("*")
+    .eq("user_id", userId)
+    .order("date", { ascending: true });
+
+  if (cloudCheckins && cloudCheckins.length > 0) {
+    const local = getCheckIns();
+    const localMap = new Map(local.map((c) => [c.date, c]));
+
+    for (const cc of cloudCheckins) {
+      localMap.set(cc.date, {
+        date: cc.date,
+        mood: cc.mood,
+        cravings: cc.cravings,
+        gratitude: cc.gratitude || "",
+        timestamp: new Date(cc.created_at).getTime(),
+      });
+    }
+
+    setItem("cs_checkins", Array.from(localMap.values()));
+  }
+
+  // Pull journal (cloud wins)
+  const { data: cloudJournal } = await supabase
+    .from("cs_journal")
+    .select("*")
+    .eq("user_id", userId)
+    .order("date", { ascending: true });
+
+  if (cloudJournal && cloudJournal.length > 0) {
+    const local = getJournalEntries();
+    const localMap = new Map(local.map((j) => [j.date, j]));
+
+    for (const cj of cloudJournal) {
+      localMap.set(cj.date, {
+        date: cj.date,
+        prompt: cj.prompt || "",
+        entry: cj.entry,
+        timestamp: new Date(cj.created_at).getTime(),
+      });
+    }
+
+    setItem("cs_journal", Array.from(localMap.values()));
+  }
+}

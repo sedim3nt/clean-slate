@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Bitter, Karla } from "next/font/google";
 import Link from "next/link";
+import { Providers } from "@/components/Providers";
+import { NavAuth, AuthModalTrigger } from "@/components/ui/NavAuth";
 import "./globals.css";
 
 const bitter = Bitter({
@@ -50,6 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bitter.variable} ${karla.variable}`}>
       <body className="min-h-screen bg-warm-white text-sumi">
+       <Providers>
         {/* Desktop nav */}
         <header className="hidden md:block border-b border-paper/50 sticky top-0 bg-warm-white/95 backdrop-blur-sm z-50">
           <nav className="max-w-[1220px] mx-auto px-6 h-16 flex items-center justify-between">
@@ -59,18 +62,21 @@ export default function RootLayout({
             >
               Clean Slate
             </Link>
-            <ul className="flex gap-8">
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-diluted hover:text-sumi transition-colors duration-300 text-sm font-medium"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-center gap-8">
+              <ul className="flex gap-8">
+                {navItems.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-diluted hover:text-sumi transition-colors duration-300 text-sm font-medium"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <NavAuth />
+            </div>
           </nav>
         </header>
 
@@ -125,6 +131,8 @@ export default function RootLayout({
             ))}
           </ul>
         </nav>
+        <AuthModalTrigger />
+       </Providers>
       </body>
     </html>
   );
