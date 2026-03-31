@@ -19,7 +19,7 @@ const karla = Karla({
 
 export const metadata: Metadata = {
   title: "Clean Slate — Your Recovery Companion",
-  description:
+  openGraph: { title: 'Clean Slate — Your Recovery Companion', description: 'A private, free daily companion for addiction recovery.', images: ['https://raw.githubusercontent.com/sedim3nt/spirittree-assets/main/og/cleanslate-og.png'], type: 'website' }, twitter: { card: 'summary_large_image', images: ['https://raw.githubusercontent.com/sedim3nt/spirittree-assets/main/og/cleanslate-og.png'] }, description:
     "A private, free daily companion for addiction recovery. Journal, milestones, tools, and reflections — all on your device.",
   manifest: "/manifest.json",
   appleWebApp: {
