@@ -8,6 +8,7 @@ import {
   type JournalEntry,
 } from "@/lib/storage";
 import prompts from "@/data/prompts.json";
+import CompanionReflection from "@/components/features/CompanionReflection";
 
 export default function JournalPage() {
   const [entries, setEntries] = useState<JournalEntry[]>([]);
@@ -107,6 +108,9 @@ export default function JournalPage() {
           </div>
         </div>
       )}
+
+      {/* The Companion */}
+      <CompanionReflection />
 
       <p className="text-xs text-diluted mt-8 text-center italic">
         Not a substitute for professional treatment.
