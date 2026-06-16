@@ -3,6 +3,7 @@ import { Bitter, Karla } from "next/font/google";
 import Link from "next/link";
 import { Providers } from "@/components/Providers";
 import { NavAuth, AuthModalTrigger } from "@/components/ui/NavAuth";
+import RecoveryChat from "@/components/RecoveryChat";
 import "./globals.css";
 
 const bitter = Bitter({
@@ -132,6 +133,7 @@ export default function RootLayout({
           </ul>
         </nav>
         <AuthModalTrigger />
+        <RecoveryChat />
        </Providers>
       </body>
     </html>
