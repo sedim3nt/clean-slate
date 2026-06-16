@@ -1,6 +1,3 @@
-import { generateText } from 'ai';
-import { defaultModel } from '@/lib/ai-provider';
-
 const SYSTEM_PROMPT = `You are The Companion for Clean Slate, a warm, non-judgmental support companion for people in addiction recovery.
 
 You help with:
@@ -63,21 +60,40 @@ export async function POST(req: Request) {
     return Response.json({ error: 'No message provided.' }, { status: 400 });
   }
 
-  // Graceful fallback when no API key is configured (mirrors provider env pattern).
-  const hasKey = Boolean(process.env.AI_API_KEY || process.env.OPENROUTER_API_KEY);
-  if (!hasKey) {
+  // Graceful fallback when the gateway is not configured.
+  const gatewayUrl = process.env.CHAT_GATEWAY_URL?.replace(/\/+$/, '');
+  const gatewaySecret = process.env.CHAT_GATEWAY_SECRET;
+  if (!gatewayUrl || !gatewaySecret) {
     return Response.json({ reply: FALLBACK_REPLY });
   }
 
   try {
-    const result = await generateText({
-      model: defaultModel,
-      system: SYSTEM_PROMPT,
-      messages: cleaned,
-      maxOutputTokens: 700,
-    });
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 90_000);
+    let reply: string | undefined;
+    try {
+      const response = await fetch(`${gatewayUrl}/chat`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          Authorization: `Bearer ${gatewaySecret}`,
+        },
+        body: JSON.stringify({ system: SYSTEM_PROMPT, messages: cleaned }),
+        signal: controller.signal,
+      });
+      if (!response.ok) {
+        throw new Error(`Gateway error ${response.status}`);
+      }
+      const data = await response.json();
+      reply = typeof data?.reply === 'string' ? data.reply : undefined;
+    } finally {
+      clearTimeout(timeout);
+    }
 
-    return Response.json({ reply: result.text });
+    if (!reply) {
+      return Response.json({ reply: FALLBACK_REPLY });
+    }
+    return Response.json({ reply });
   } catch {
     return Response.json({ reply: FALLBACK_REPLY });
   }
